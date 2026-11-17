@@ -19,6 +19,17 @@
     backdrop-filter: blur(1);
 }
 
+.header {
+    width: inherit;
+    height: 5vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    cursor: grab;
+}
+
 .sets {
     position: absolute;
     display: flex;
@@ -28,5 +39,18 @@
     height: 30vh;
     top: 20vh;
     left: 15vh;
-    z-index: 2000;
+    z-index: 2;
+    flex-direction: column;
+}
+
+.map {
+    position: absolute;
+    display: flex;
+    background-color: #ffffff36;
+    backdrop-filter: blur(2px);
+    width: 70vh;
+    height: 75vh;
+    top: 10vh;
+    left: 60vh;
+    z-index: 3;
 }
