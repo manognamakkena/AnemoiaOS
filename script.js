@@ -1,7 +1,6 @@
 dragElement(document.getElementById("sets"));
 dragElement(document.getElementById("map"));
 closeWindow(document.getElementById("map"));
-closeWindow(document.getElementById("sets"));
 
 function closeWindow(element) {
     const close = element.querySelector(".closeButton");
@@ -10,9 +9,21 @@ function closeWindow(element) {
     })
 }
 
-/*function openWindow(element) {
-    element.style.display = "flex";
-}*/
+function openWindow() {
+    const appOpenButtons = document.querySelectorAll(".appButton");
+
+    appOpenButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+            const targetId = button.getAttribute("data-target");
+            const targetWindow = document.getElementById(targetId);
+
+            if (targetWindow) {
+                targetWindow.style.display = "flex";
+            }
+        });
+    });
+}
+openWindow();
 
 function dragElement(element) {
     var initialX = 0;
