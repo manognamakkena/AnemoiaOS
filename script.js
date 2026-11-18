@@ -1,5 +1,18 @@
 dragElement(document.getElementById("sets"));
 dragElement(document.getElementById("map"));
+closeWindow(document.getElementById("map"));
+closeWindow(document.getElementById("sets"));
+
+function closeWindow(element) {
+    const close = element.querySelector(".closeButton");
+    close.addEventListener("click", function () {
+        element.style.display = "none";
+    })
+}
+
+/*function openWindow(element) {
+    element.style.display = "flex";
+}*/
 
 function dragElement(element) {
     var initialX = 0;
