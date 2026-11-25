@@ -18,21 +18,59 @@
             <div class="folderButton">
                 <button class="appButton" id="folderOpen" data-target="sets">Folder</button>
             </div>
+            <div class="notesButton">
+                <button class="appButton" id="notesOpen" data-target="notes">Notes</button>
+            </div>
         </div>
     </div>
 
-    <div class="sets" id="sets">
+    <div class="sets appWindow" id="sets">
         <div class="header" id="header"></div>
         <h1 class="text-3xl font-bold underline">Hello World!</h1>
     </div>
 
-    <div class="map" id="map">
+    <div class="map appWindow" id="map">
         <div class="header" id="header">
             <button class="closeButton" id="close">x</button>
         </div>
+        <div style="width: 100%;">
+            <div style="position: relative; padding-bottom: 69.64136780650541%; padding-top: 0; height: 0;"><iframe
+                    title="ENG map of songju" frameborder="0" width="1199px" height="835px"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                    src="https://view.genially.com/5e9411a243f5e90de59a1023" type="text/html" allowscriptaccess="always"
+                    allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="notes appWindow" id="notes">
+        <div class="header" id="header">
+            <button class="closeButton" id="close">x</button>
+        </div>
+        <div class="notesContent">
+            <div class="sidebar">
+                <a class="active" href="#n1" data-tab="n1">H</a>
+                <a href="#n2" data-tab="n2">N</a>
+                <a href="#n3" data-tab="n3">C</a>
+                <a href="#n4" data-tab="n4">A</a>
+            </div>
+            <div class="content">
+                <div class="tab active" id="n1">
+                    <h3>Namjoon</h3>
+                </div>
+                <div class="tab" id="n2">
+                    <h3>Jin</h3>
+                </div>
+                <div class="tab" id="n3">
+                    <h3>Yoongi</h3>
+                </div>
+                <div class="tab" id="n4">
+                    <h3>Hobi</h3>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
 </body>
 
 </html>
