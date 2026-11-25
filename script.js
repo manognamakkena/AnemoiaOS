@@ -14,6 +14,7 @@ function closeWindow(element) {
 }
 
 //func to open windows
+var biggestIndex = 10;
 function openWindow() {
     const appOpenButtons = document.querySelectorAll(".appButton");
 
@@ -24,7 +25,8 @@ function openWindow() {
 
             if (targetWindow) {
                 targetWindow.style.display = "flex";
-                targetWindow.style.zIndex = "100";
+                biggestIndex += 10;
+                targetWindow.style.zIndex = biggestIndex;
             }
         });
     });
