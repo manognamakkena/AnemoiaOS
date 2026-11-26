@@ -95,3 +95,82 @@ links.forEach((link) => {
         document.getElementById(link.dataset.tab).classList.add("active");
     });
 });
+
+//func for rendering gallery
+const galleryData = {
+    nj: [
+        { name: "p1", src: "assets\bg.jpg" }
+    ],
+    jin: [
+        { name: 'selfie.jpg', src: 'assets/jin/selfie.jpg' }
+    ],
+    yg: [],
+    jh: [],
+    th: [],
+    jm: [],
+    jk: []
+};
+
+const galleryContent = document.getElementById('galleryContent');
+const galleryPath = document.getElementById('galleryPath');
+
+let currentFolder = null;
+
+function renderGallery() {
+    galleryContent.innerHTML = '';
+
+    if (!currentFolder) {
+        galleryPath.textContent = 'C://Gallery';
+
+        Object.keys(galleryData).forEach((folderName) => {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'folderLabled';
+            wrapper.innerHTML = `
+                <button>
+                    <img src="assets/folder.png" alt="${folderName}">
+                    <span>${folderName}</span>
+                </button>
+            `;
+
+            wrapper.querySelector('button').addEventListener('click', () => {
+                currentFolder = folderName;
+                renderGallery();
+            });
+
+            galleryContent.appendChild(wrapper);
+        });
+        return;
+    }
+
+    galleryPath.textContent = `C://Gallery/${currentFolder}`;
+
+    const files = galleryData[currentFolder];
+
+    if (files.length === 0) {
+        galleryContent.innerHTML = '<p>empty</p>';
+        return;
+    }
+
+    files.forEach((file) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'folderLabled';
+        wrapper.innerHTML = `
+            <button>
+                <img src = "${file.src}">
+                <span>${file.name}</span>
+            </button>
+        `;
+
+        wrapper.querySelector('button').addEventListener('click', () => {
+            openImagePreview(file);
+        });
+
+        galleryContent.appendChild(wrapper);
+    });
+}
+
+function openImagePreview(file) {
+    window.open(file.src, '_blank');
+}
+
+renderGallery();
