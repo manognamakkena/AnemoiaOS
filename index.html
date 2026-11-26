@@ -13,13 +13,13 @@
     <div class="static">
         <div class="taskbar"> <!--footer, time, apps-->
             <div class="mapButton">
-                <button class="appButton" id="mapOpen" data-target="map">Maps</button>
+                <button class="appButton" id="mapOpen" data-target="map"><img src="assets/blueprint.png"></button>
             </div>
-            <div class="folderButton">
-                <button class="appButton" id="folderOpen" data-target="sets">Folder</button>
+            <div class="galleryButton">
+                <button class="appButton" id="galleryOpen" data-target="gallery"><img src="assets/gallery.png"></button>
             </div>
             <div class="notesButton">
-                <button class="appButton" id="notesOpen" data-target="notes">Notes</button>
+                <button class="appButton" id="notesOpen" data-target="notes"><img src="assets/notepad.png"></button>
             </div>
         </div>
     </div>
@@ -69,8 +69,41 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="script.js"></script>
+    <div class="gallery appWindow" id="gallery">
+        <div class="header" id="header">
+            <button class="closeButton" id="close">x</button>
+        </div>
+        <div class="pathBar">
+            C://Gallery
+        </div>
+        <div class="galleryContent">
+            <div class="folderLabled">
+                <button><img src="assets/folder.png">nj</button>
+            </div>
+            <div class="folderLabled">
+                <button><img src="assets/folder.png">jin</button>
+            </div>
+            <div class="folderLabled">
+                <button><img src="assets/folder.png">yg</button>
+            </div>
+            <div class="folderLabled">
+                <button><img src="assets/folder.png">jh</button>
+            </div>
+            <div class="folderLabled">
+                <button><img src="assets/folder.png">th</button>
+            </div>
+            <div class="folderLabled">
+                <button><img src="assets/folder.png">jm</button>
+            </div>
+            <div class="folderLabled">
+                <button><img src="assets/folder.png">jk</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

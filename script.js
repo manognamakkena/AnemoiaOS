@@ -1,9 +1,11 @@
 dragElement(document.getElementById("sets"));
 dragElement(document.getElementById("map"));
 dragElement(document.getElementById("notes"));
+dragElement(document.getElementById("gallery"));
 
 closeWindow(document.getElementById("map"));
 closeWindow(document.getElementById("notes"));
+closeWindow(document.getElementById("gallery"));
 
 //func to close windows
 function closeWindow(element) {
