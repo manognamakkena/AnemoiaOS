@@ -13,13 +13,15 @@
     <div class="static">
         <div class="taskbar"> <!--footer, time, apps-->
             <div class="mapButton">
-                <button class="appButton" id="mapOpen" data-target="map"><img src="assets/blueprint.png"></button>
+                <button class="appButton" id="mapOpen" data-target="map"><img src="assets/icons/blueprint.png"></button>
             </div>
             <div class="galleryButton">
-                <button class="appButton" id="galleryOpen" data-target="gallery"><img src="assets/gallery.png"></button>
+                <button class="appButton" id="galleryOpen" data-target="gallery"><img
+                        src="assets/icons/gallery.png"></button>
             </div>
             <div class="notesButton">
-                <button class="appButton" id="notesOpen" data-target="notes"><img src="assets/notepad.png"></button>
+                <button class="appButton" id="notesOpen" data-target="notes"><img
+                        src="assets/icons/notepad.png"></button>
             </div>
         </div>
     </div>
@@ -75,32 +77,12 @@
         <div class="header" id="header">
             <button class="closeButton" id="close">x</button>
         </div>
-        <div class="pathBar" id="galleryPath">
 
+        <div class="flex flex-row">
+            <div class="backButton" id="backButton"><img src="assets/icons/arrow.png"></div>
+            <div class="pathBar" id="galleryPath"> </div>
         </div>
-        <div class="galleryContent" id="galleryContent">
-            <div class="folderLabled">
-                <button><img src="assets/folder.png" alt="nj"></button>
-            </div>
-            <div class="folderLabled">
-                <button><img src="assets/folder.png" alt="jin"></button>
-            </div>
-            <div class="folderLabled">
-                <button><img src="assets/folder.png" alt="yg"></button>
-            </div>
-            <div class="folderLabled">
-                <button><img src="assets/folder.png" alt="jh"></button>
-            </div>
-            <div class="folderLabled">
-                <button><img src="assets/folder.png" alt="th"></button>
-            </div>
-            <div class="folderLabled">
-                <button><img src="assets/folder.png" alt="jm"></button>
-            </div>
-            <div class="folderLabled">
-                <button><img src="assets/folder.png" alt="jk"></button>
-            </div>
-        </div>
+        <div class="galleryContent" id="galleryContent"> </div>
     </div>
 
     <script src="script.js" defer></script>

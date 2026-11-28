@@ -99,7 +99,12 @@ links.forEach((link) => {
 //func for rendering gallery
 const galleryData = {
     nj: [
-        { name: "p1", src: "assets\bg.jpg" }
+        { name: "p1", src: "assets/nj/nj1.jpg" },
+        { name: "p2", src: "assets/nj/nj2.jpg" },
+        { name: "p3", src: "assets/nj/nj3.jpg" },
+        { name: "p4", src: "assets/nj/nj4.jpg" },
+        { name: "p5", src: "assets/nj/nj5.jpg" },
+        { name: "p6", src: "assets/nj/nj6.jpg" }
     ],
     jin: [
         { name: 'selfie.jpg', src: 'assets/jin/selfie.jpg' }
@@ -113,12 +118,17 @@ const galleryData = {
 
 const galleryContent = document.getElementById('galleryContent');
 const galleryPath = document.getElementById('galleryPath');
+const galleryBack = document.getElementById("backButton");
+
 
 let currentFolder = null;
 
 function renderGallery() {
     galleryContent.innerHTML = '';
 
+    if (galleryBack) {
+        galleryBack.hidden = !currentFolder;
+    }
     if (!currentFolder) {
         galleryPath.textContent = 'C://Gallery';
 
@@ -127,7 +137,7 @@ function renderGallery() {
             wrapper.className = 'folderLabled';
             wrapper.innerHTML = `
                 <button>
-                    <img src="assets/folder.png" alt="${folderName}">
+                    <img src="assets/icons/folder.png" alt="${folderName}">
                     <span>${folderName}</span>
                 </button>
             `;
@@ -166,6 +176,14 @@ function renderGallery() {
         });
 
         galleryContent.appendChild(wrapper);
+    });
+}
+
+//back button for gallery
+if (galleryBack) {
+    galleryBack.addEventListener('click', () => {
+        currentFolder = null;
+        renderGallery();
     });
 }
 
